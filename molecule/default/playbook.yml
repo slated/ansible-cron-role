@@ -1,0 +1,17 @@
+---
+- name: Converge
+  hosts: all
+  vars:
+    cron_tasks:
+      - name: "rescore"
+        minute: 55
+        hour: 23
+        weekday: "Mon,Thu"
+        day: "*"
+        month: "*"
+        job: "env > /tmp/env"
+    cron_vars:
+      - name: MAILTO
+        value: mail@example.com
+  roles:
+    - ansible-cron-role

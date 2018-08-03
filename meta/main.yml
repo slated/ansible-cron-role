@@ -1,0 +1,15 @@
+---
+galaxy_info:
+  author: Thien Ho
+  company: Slated
+  description: Add crontab tasks or variables
+  license: MIT
+  min_ansible_version: 1.8
+  platforms:
+    - name: Ubuntu
+      versions:
+        - trusty
+        - xenial
+  galaxy_tags:
+    - system
+dependencies: []

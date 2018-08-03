@@ -1,0 +1,4 @@
+[flake8]
+exclude = molecule/default/tests/test_default.py
+format = pylint
+ignore = E501
