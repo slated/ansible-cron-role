@@ -4,6 +4,7 @@
   gather_facts: False
   vars:
     django_project_path: '/root'
+    django_project_name: 'test'
     cron_tasks:
       - name: "test"
         minute: 55
