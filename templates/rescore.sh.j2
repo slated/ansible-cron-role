@@ -1,0 +1,10 @@
+date
+source $HOME/.virtualenvrc
+workon slated
+
+set -x
+./manage.py refresh_studio_system
+./manage.py refresh_scores
+./manage.py search_content update_index --content User --confirm &
+./manage.py search_content update_index --content Film &
+./manage.py search_content update_index --content ThirdPartyVerifiedUser &

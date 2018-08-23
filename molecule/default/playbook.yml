@@ -1,15 +1,17 @@
 ---
 - name: Converge
   hosts: all
+  gather_facts: False
   vars:
+    django_project_path: '/root'
     cron_tasks:
-      - name: "rescore"
+      - name: "test"
         minute: 55
         hour: 23
         weekday: "Mon,Thu"
         day: "*"
         month: "*"
-        job: "env > /tmp/env"
+        job: "/tmp/test.sh > /tmp/env"
     cron_vars:
       - name: MAILTO
         value: mail@example.com

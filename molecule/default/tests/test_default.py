@@ -8,5 +8,5 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 def test_crontab_file(host):
     c = host.command('crontab -l').stdout
     assert 'MAILTO=mail@example.com' in c
-    assert '#Ansible: rescore' in c
-    assert '55 23 * * Mon,Thu env > /tmp/env' in c
+    assert '#Ansible: test' in c
+    assert '55 23 * * Mon,Thu /tmp/test.sh > /tmp/env' in c

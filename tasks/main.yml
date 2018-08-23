@@ -6,6 +6,12 @@
     state: present
   tags: [ cron ]
 
+- name: Put the script to server
+  template:
+    src: rescore.sh.j2
+    dest: "{{ django_project_path }}/bin/rescore.sh"
+    mode: 0755
+
 - name: Configuring cron tasks
   cron:
     cron_file: "{{ item.cron_file | default(omit) }}"
