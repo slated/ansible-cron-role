@@ -11,6 +11,7 @@
     src: rescore.sh.j2
     dest: "{{ django_project_path }}/bin/rescore.sh"
     mode: 0755
+  tags: [ cron ]
 
 - name: Configuring cron tasks
   cron:

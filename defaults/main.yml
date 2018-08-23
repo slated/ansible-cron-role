@@ -13,6 +13,7 @@
 #     weekday: ...
 #
 
+django_project_path: '{{ django_project_home }}/{{ django_project_name }}'
 cron_tasks: []
 cron_vars:
   - name: PATH
